@@ -41,6 +41,7 @@ MainWindow::MainWindow(QWidget *parent)
 
   connect(&listener_, &SocketListener::connectedToServer, this, &MainWindow::connected);
   connect(&listener_, &SocketListener::disconnectedFromServer, this, &MainWindow::disconnected);
+  connect(&listener_, &SocketListener::logMessage, this, &MainWindow::logMessage);
   connect(&listener_, &SocketListener::errorOccurred, this, &MainWindow::errorOccurred);
 
   connect(&listener_, &SocketListener::commandArrived, this, &MainWindow::handleCommand);

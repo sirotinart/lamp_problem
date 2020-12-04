@@ -18,7 +18,7 @@ SocketListener::SocketListener(QObject *parent)
 
 void SocketListener::connectToServer(const QString &address, quint16 port)
 {
-  emit logMessage(QString("Connecting to server, address: %1, port %2").arg(address).arg(port));
+  emit logMessage(QString("Connecting to server: %1:%2").arg(address).arg(port));
 
   QUrl serverAddress(address);
 
