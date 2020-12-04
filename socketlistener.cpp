@@ -8,8 +8,8 @@
 
 namespace Ivideon {
 
-SocketListener::SocketListener(QObject *parent) :
-  QObject(parent)
+SocketListener::SocketListener(QObject *parent)
+  : QObject(parent)
 {
   connect(&socket_, &QTcpSocket::connected, this, &SocketListener::connected);
   connect(&socket_, &QTcpSocket::disconnected, this, &SocketListener::disconnected);
